@@ -2336,13 +2336,14 @@ namespace Api
 
 Add-Type -TypeDefinition $TypeDef -Language CSharp
 
-$IsOOBEComplete = $false
-$hr = [Api.Kernel32]::OOBEComplete([ref] $IsOOBEComplete)
+# $IsOOBEComplete = $false
+# $hr = [Api.Kernel32]::OOBEComplete([ref] $IsOOBEComplete)
 
 
-if ($IsOOBEComplete -eq 0) {
+# if ($IsOOBEComplete -eq 0) {
+{
 
-    write-output "Still in OOBE, continue"
+#     write-output "Still in OOBE, continue"
     ##Apps to remove - NOTE: Chrome has an unusual uninstall so sort on it's own
     $blacklistapps = @(
 
